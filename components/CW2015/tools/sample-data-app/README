@@ -1,0 +1,24 @@
+# CW2015 数据采集示例
+
+该示例应用从 CW2015 电量计读取数据，并以 CSV 格式周期打印到串口控制台，便于抓取日志做曲线分析。
+
+默认“截止放电电压”为 3.3V，可通过 menuconfig 修改。
+
+## 日志示例
+
+```
+I (305) main_task: Started on CPU0
+I (308) main_task: Calling app_main()
+I (311) cw2015_sample: Hello CW2015 Battery Fuel Gauge!
+I (321) cw2015_sample: I2C master SCL IO: 1
+I (325) cw2015_sample: I2C master SDA IO: 2
+I (453) cw2015_sample: End discharge voltage: 3300
+
+-------- Start record --------
+ElapsedTime,     Voltage,        SOC,    SOC_RAW,    RRT(min),   ALRT
+0,       4078,   92,     0x5C10,    123,        0
+2,       4077,   92,     0x5C0F,    123,        0
+4,       4077,   92,     0x5C0E,    122,        0
+
+......
+```

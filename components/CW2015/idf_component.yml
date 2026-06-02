@@ -1,0 +1,4 @@
+dependencies:
+  idf: '>=5.0'
+description: CellWise CW2015 battery fuel gauge driver
+version: 0.1.0

@@ -1,0 +1,4 @@
+build/
+test_apps/build/
+test_apps/managed_components/
+test_apps/sdkconfig
