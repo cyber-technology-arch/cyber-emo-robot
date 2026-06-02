@@ -4,7 +4,7 @@
 
 ## Cyber Robot Emo 固件（基于 xiaozhi-esp32 框架）
 
-本仓库是一个面向 **ESP32-S3 双足机器人板（`cyber-robot-emo`）** 的固件工程，用于运行基于 MCP 的语音交互与设备控制能力（屏幕/灯光/舵机/电源等）。
+本仓库是一个面向 **ESP32-S3 双足机器人板（`cyber-robot-emo-v`）** 的固件工程，用于运行基于 MCP 的语音交互与设备控制能力（屏幕/灯光/舵机/电源等）。
 
 ### 上游关系与致谢（开源合规）
 
@@ -21,7 +21,7 @@
 
 ### 支持的硬件（本仓库仅维护这一块）
 
-- **板级**：`cyber-robot-emo`
+- **板级**：`cyber-robot-emo-v`
 - **主控**：ESP32-S3
 - **显示**：ST7789 SPI LCD（240×240）
 - **音频**：ES7210（I2S ADC）+ ES8311（I2S DAC）+ PA（用于语音链路，不包含音乐播放器）
@@ -58,9 +58,9 @@ idf.py build
 idf.py -p /dev/ttyUSB0 flash monitor
 ```
 
-### 设备端 MCP 工具（与 `cyber-robot-emo` 板级相关）
+### 设备端 MCP 工具（与 `cyber-robot-emo-v` 板级相关）
 
-动作控制通过 MCP 工具暴露（以板级注册实现为准，建议从 `main/boards/cyber-robot-emo/emo_controller.cc` 查看最新列表），常见工具包括：
+动作控制通过 MCP 工具暴露（以板级注册实现为准，建议从 `main/boards/cyber-robot-emo-v/emo_controller.cc` 查看最新列表），常见工具包括：
 
 - `self.emo.action`：预置动作
 - `self.emo.servo_sequences`：自编程舵机序列
@@ -72,17 +72,17 @@ idf.py -p /dev/ttyUSB0 flash monitor
 
 ### 板级文件与引脚定义
 
-- **板级目录**：`main/boards/cyber-robot-emo/`
-- **引脚/硬件宏定义**：`main/boards/cyber-robot-emo/config.h`
-- **板级入口与外设初始化**：`main/boards/cyber-robot-emo/emo_robot.cc`
-- **动作与舵机轨迹层**：`main/boards/cyber-robot-emo/emo_movements.cc`
-- **灯光控制**：`main/boards/cyber-robot-emo/cyber_led.cc`
+- **板级目录**：`main/boards/cyber-robot-emo-v/`
+- **引脚/硬件宏定义**：`main/boards/cyber-robot-emo-v/config.h`
+- **板级入口与外设初始化**：`main/boards/cyber-robot-emo-v/emo_robot.cc`
+- **动作与舵机轨迹层**：`main/boards/cyber-robot-emo-v/emo_movements.cc`
+- **灯光控制**：`main/boards/cyber-robot-emo-v/cyber_led.cc`
 
 
 ### 目录结构（摘要）
 
 - `main/`：应用主逻辑、协议、显示、音频服务、MCP 服务器等
-- `main/boards/cyber-robot-emo/`：本仓库唯一维护的板级实现
+- `main/boards/cyber-robot-emo-v/`：本仓库唯一维护的板级实现
 - `partitions/`：分区表（如需 OTA/资源分区调整可在此维护）
 - `components/` / `managed_components/`：依赖组件
 

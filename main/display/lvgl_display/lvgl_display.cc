@@ -12,7 +12,7 @@
 #include "settings.h"
 #include "assets/lang_config.h"
 #include "jpg/image_to_jpeg.h"
-#include "boards/cyber-robot-emo/power_manager.h"
+#include "boards/cyber-robot-emo-v/power_manager.h"
 
 #define TAG "Display"
 

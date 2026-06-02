@@ -16,5 +16,5 @@ main/mmap_generate_emoji.h
 *.pyc
 *.bin
 mmap_generate_*.h
-main/boards/cyber-robot-emo/SOFTWARE_TEST_PLAN.md
-main/boards/cyber-robot-emo/ACTION_TEST_GUIDE.md
+main/boards/cyber-robot-emo-v/SOFTWARE_TEST_PLAN.md
+main/boards/cyber-robot-emo-v/ACTION_TEST_GUIDE.md

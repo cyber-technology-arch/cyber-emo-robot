@@ -68,10 +68,10 @@ set(BUILTIN_ICON_FONT font_awesome_14_1)
 # Set default assets if the board uses partition table V2
 #
 # NOTE:
-# This repository is intentionally trimmed to a single board: cyber-robot-emo.
+# This repository is intentionally trimmed to a single board: cyber-robot-emo-v.
 # Some existing sdkconfig files may not have the board symbol set after trimming.
-# We therefore default to cyber-robot-emo unconditionally.
-set(BOARD_TYPE "cyber-robot-emo")
+# We therefore default to cyber-robot-emo-v unconditionally.
+set(BOARD_TYPE "cyber-robot-emo-v")
 set(BUILTIN_TEXT_FONT font_puhui_16_4)
 set(BUILTIN_ICON_FONT font_awesome_16_4)
 
@@ -80,7 +80,7 @@ if(0) # legacy multi-board selection removed in this repo
     set(BUILTIN_TEXT_FONT font_puhui_basic_14_1)
     set(BUILTIN_ICON_FONT font_awesome_14_1)
 elseif(CONFIG_BOARD_TYPE_CYBER_ROBOT_EMO)
-    set(BOARD_TYPE "cyber-robot-emo")
+    set(BOARD_TYPE "cyber-robot-emo-v")
     set(BUILTIN_TEXT_FONT font_puhui_16_4)
     set(BUILTIN_ICON_FONT font_awesome_16_4)
 elseif(CONFIG_BOARD_TYPE_BREAD_COMPACT_ML307)
