@@ -66,7 +66,16 @@ set(BUILTIN_ICON_FONT font_awesome_14_1)
 
 # Add board files according to BOARD_TYPE
 # Set default assets if the board uses partition table V2
-if(CONFIG_BOARD_TYPE_BREAD_COMPACT_WIFI)
+#
+# NOTE:
+# This repository is intentionally trimmed to a single board: cyber-robot-emo.
+# Some existing sdkconfig files may not have the board symbol set after trimming.
+# We therefore default to cyber-robot-emo unconditionally.
+set(BOARD_TYPE "cyber-robot-emo")
+set(BUILTIN_TEXT_FONT font_puhui_16_4)
+set(BUILTIN_ICON_FONT font_awesome_16_4)
+
+if(0) # legacy multi-board selection removed in this repo
     set(BOARD_TYPE "bread-compact-wifi")
     set(BUILTIN_TEXT_FONT font_puhui_basic_14_1)
     set(BUILTIN_ICON_FONT font_awesome_14_1)
@@ -634,7 +643,7 @@ if(XIAOZHI_FONTS_COMPONENT_PATH)
     set(XIAOZHI_FONTS_PATH "${XIAOZHI_FONTS_COMPONENT_PATH}")
 endif()
 
-if(CONFIG_BOARD_TYPE_ESP_HI)
+if(0) # legacy ESP_HI asset download removed in this repo
 set(URL "https://github.com/espressif2022/image_player/raw/main/test_apps/test_8bit")
 set(EMOJI_DIR "${CMAKE_BINARY_DIR}/emoji")
 file(MAKE_DIRECTORY ${EMOJI_DIR})
